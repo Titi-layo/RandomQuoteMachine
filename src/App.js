@@ -96,9 +96,7 @@ class GetQuote extends React.Component {
     this.setState(
    {BackgroundChange: {backgroundColor: colors[index], transition: "background-color 1s ease-in"},TextChange: {color : colors[index], transition: "color 1s ease-in"}}
    );
-   document.body.style.backgroundColor = colors[index];
-   
-    
+     
  }
   
   
@@ -106,6 +104,7 @@ class GetQuote extends React.Component {
   render() {
     
   return (
+      <div style={this.state.BackgroundChange} className="full-page">
       <div className="quote-box">
       <h1 style={this.state.TextChange} className="text">{this.state.quote}</h1>
       <h1 style={this.state.TextChange} className="author">{this.state.author}</h1>
@@ -113,6 +112,7 @@ class GetQuote extends React.Component {
       <Tweet styling={this.state.BackgroundChange} quote={this.state.quote} author={this.state.author} />
          
       <div className="styling"> <button className="new-quote" onClick={ () => {this.handleColor();this.handleClick();}} style={this.state.BackgroundChange}>New quote</button></div>
+      </div>
       </div>
     );
   }
