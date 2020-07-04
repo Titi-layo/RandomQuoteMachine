@@ -97,9 +97,7 @@ class GetQuote extends React.Component {
    {BackgroundChange: {backgroundColor: colors[index], transition: "background-color 1s ease-in"},TextChange: {color : colors[index], transition: "color 1s ease-in"}}
    );
      
- }
-  
-  
+  }
   
   render() {
     
